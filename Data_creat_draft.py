@@ -106,14 +106,14 @@ temp_c1 = final_data_100['c1'] ** 2
 temp_c2 = final_data_100['c1'] * final_data_100['c2']
 temp_c3 = np.sign(final_data_100['x1'] * final_data_100['c3'])
 
-c13 = c_new[:, :3].copy()
-c13[:, 0] = np.array(temp_c1)
-c13[:, 1] = np.array(temp_c2)
-c13[:, 2] = np.array(temp_c3)
+c23 = c_new[:, :3].copy()
+c23[:, 0] = np.array(temp_c1)
+c23[:, 1] = np.array(temp_c2)
+c23[:, 2] = np.array(temp_c3)
 
-seita2 = np.array([[0.04, 0.035, 0.01]]).T
+seita2 = np.array([[0.04, 0.03, 0.012]]).T
 
-gz2 = np.dot(c13, seita2)
+gz2 = np.dot(c23, seita2)
 
 final_data_100['gz1'] = gz1
 final_data_100['gz2'] = gz2
